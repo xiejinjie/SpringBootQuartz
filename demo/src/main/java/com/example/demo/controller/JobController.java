@@ -36,7 +36,7 @@ public class JobController
 	private IJobAndTriggerService iJobAndTriggerService;
 	
 	//加入Qulifier注解，通过名称注入bean
-	@Autowired @Qualifier("Scheduler")
+	@Autowired
 	private Scheduler scheduler;
 	
 	private static Logger log = LoggerFactory.getLogger(JobController.class);  

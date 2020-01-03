@@ -14,7 +14,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 @Configuration
 public class SchedulerConfig {
 
-    @Bean(name="SchedulerFactory")
+//    @Bean(name="taskSchedulerFactory")
     public SchedulerFactoryBean schedulerFactoryBean() throws IOException {
         SchedulerFactoryBean factory = new SchedulerFactoryBean();
         factory.setQuartzProperties(quartzProperties());
@@ -41,7 +41,7 @@ public class SchedulerConfig {
     /*
      * 通过SchedulerFactoryBean获取Scheduler的实例
      */
-    @Bean(name="Scheduler")
+//    @Bean(name="taskscheduler")
     public Scheduler scheduler() throws IOException {
         return schedulerFactoryBean().getScheduler();
     }
